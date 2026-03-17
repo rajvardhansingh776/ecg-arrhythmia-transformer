@@ -1,0 +1,22 @@
+dataset:
+  train: ptbxl
+  test: incart
+
+training:
+  batch_size: 64
+  epochs: 50
+  lr: 0.0001
+  patience: 6
+
+model:
+  type: patch_transformer
+  embed_dim: 128
+  heads: 4
+  layers: 4
+
+evaluation:
+  metrics:
+    - accuracy
+    - f1
+    - auroc
+    - ece
